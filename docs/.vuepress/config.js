@@ -1,41 +1,30 @@
+const { hopeTheme } = require('vuepress-theme-hope')
+// import { hopeTheme } from ('vuepress-theme-hope')
 module.exports = {
-    title: 'Hello VuePress',
-    description: 'Just playing around',
+    title: '微控工业网关',
+    description: '解释说明文档',
     themeConfig: {
         logo: '/assets/img/tu.png',
         nav: [
             { text: '主页', link: '/' },
-            { text: 'Guide', link: '/guide/' },
-            { text: 'External', link: 'https://google.com' }
-
-            // {
-            //     text: 'Languages',
-            //     items: [
-            //       { text: 'Chinese', link: '/language/chinese' },
-            //       { text: 'Japanese', link: '/language/japanese' }
-            //     ]
-            //   }
-
-            // {
-            //     text: 'Languages',
-            //     items: [
-            //       { text: 'Group1', items: [
-            //         { text: 'Home', link: '/' },
-            //         { text: 'Guide', link: '/guide/' },
-            //         { text: 'External', link: 'https://google.com' }
-            //       ] },
-            //       { text: 'Group2', items: [/* 66 */] }
-            //     ]
-            //   }
-
+            { text: '导航', link: '/guide/' },
+            { text: '链接', link: 'https://github.com/winingner/vuepressfour' }
           ],
-        //   navbar: false,
         sidebar: [
             ['/','首页'],
-            '/page-a',
-            ['/page-b', 'Explicit link text']
+            ['/graphic_pageone','图形界面'],
           ],
-        //   displayAllHeaders: true ,
-
-      }
+          activeHeaderLinks: false,
+      },
+      theme: hopeTheme({
+        encrypt: {
+          config: {
+            // 这会加密整个 guide 目录，并且两个密码都是可用的
+            "/guide/": ["1234", "5678"],
+            // 这只会加密 config/page.html
+            // "/config/page.html": "1234",
+          },
+        },
+      }),
+      plugins: ['@vuepress/back-to-top']
   }

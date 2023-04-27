@@ -1,9 +1,34 @@
 {
   "devDependencies": {
-    "vuepress": "^1.9.9"
+    "@babel/preset-env": "^7.21.4",
+    "@vuepress/plugin-back-to-top": "^2.0.0-beta.61",
+    "@vuepress/plugin-palette": "^2.0.0-beta.61",
+    "vuepress": "^1.9.9",
+    "vuepress-theme-hope": "^2.0.0-beta.206"
   },
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
-  }
+  },
+  "dependencies": {
+    "vue": "2.7.14"
+  },
+  "name": "vuepressfour",
+  "version": "1.0.0",
+  "main": "bable.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winingner/vuepressfour.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/winingner/vuepressfour/issues"
+  },
+  "homepage": "https://github.com/winingner/vuepressfour#readme",
+  "description": ""
 }
